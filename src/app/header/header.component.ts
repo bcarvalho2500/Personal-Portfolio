@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
         <a class="navbar-item">
           <img src="../assets/LogoFinal.png">
         </a>
+        <a class="navbar"> Hwllow</a>
       </div>
     </div>
     
