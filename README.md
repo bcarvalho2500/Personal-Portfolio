@@ -2,6 +2,8 @@
 
 A personal project to create a web portfolio for myself
 
+The site can be found at brandoncarvalho.com
+
 # What I learned and plan to learn
 * Angular
 * Node.js
