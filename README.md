@@ -1,5 +1,16 @@
 # PersonalPortfolio
 
+A personal project to create a web portfolio for myself
+
+# What I learned and plan to learn
+* Angular
+* Node.js
+* A CSS Framework (currently using Bulma)
+* Creating and managing a NoSQL (MongoDB planned)
+* & much more
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
 
 ## Development server
