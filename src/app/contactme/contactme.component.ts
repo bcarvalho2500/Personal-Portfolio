@@ -23,7 +23,11 @@ import { FormControl, FormGroup, NgForm } from '@angular/forms';
           <div class="field">
             <label class="label">Name</label>
             <div class="control">
-              <input class="input" type="text" name="name" placeholder="Name" [(ngModel)]="name">
+              <input class="input" type="text" name="name" placeholder="Name" [(ngModel)]="name" #nameInput="ngModel" required>
+              
+              <div class="help is-error" *ngIf="nameInput.invalid && nameInput.touched">
+                Your name is required.
+              </div>
             </div>
           </div>
 
@@ -31,7 +35,10 @@ import { FormControl, FormGroup, NgForm } from '@angular/forms';
           <div class="field">
             <label class="label">Email</label>
             <div class="control">
-              <input class="input" type="email" name="email" placeholder="Email Address" [(ngModel)]="email">
+              <input class="input" type="email" name="email" placeholder="Email Address" [(ngModel)]="email" #emailInput="ngModel" ngModel [email]="true" required>
+              <div class="help is-error" *ngIf="emailInput.invalid && emailInput.touched">
+                Your email is required.
+              </div>
             </div>
           </div>
 
@@ -43,7 +50,7 @@ import { FormControl, FormGroup, NgForm } from '@angular/forms';
             </div>
           </div>
 
-          <button type="submit" class="button is-info" id="sendButton">Send!</button>
+          <button type="submit" class="button is-info" id="sendButton" [disabled]="emailForm.invalid">Send!</button>
 
           <div class="container field">
             <p class="is-size-7 mt-3">Email is sent using <a href="https://postmail.invotes.com">Postmail</a></p>
