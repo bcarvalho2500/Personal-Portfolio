@@ -23,7 +23,9 @@ import { FormControl, FormGroup, NgForm } from '@angular/forms';
           <div class="field">
             <label class="label">Name</label>
             <div class="control">
-              <input class="input" type="text" name="name" placeholder="Name" [(ngModel)]="name" #nameInput="ngModel" required>
+              <input class="input" type="text" name="name" placeholder="Name" [(ngModel)]="name" #nameInput="ngModel" required
+                      [ngClass]="{'is-danger': nameInput.invalid && nameInput.touched}"
+                      [ngClass]="{'is-primary': nameInput.valid && nameInput.touched}">
               
               <div class="help is-error" *ngIf="nameInput.invalid && nameInput.touched">
                 Your name is required.
@@ -35,9 +37,11 @@ import { FormControl, FormGroup, NgForm } from '@angular/forms';
           <div class="field">
             <label class="label">Email</label>
             <div class="control">
-              <input class="input" type="email" name="email" placeholder="Email Address" [(ngModel)]="email" #emailInput="ngModel" ngModel [email]="true" required>
-              <div class="help is-error" *ngIf="emailInput.invalid && emailInput.touched">
-                Your email is required.
+              <input class="input" type="email" name="email" placeholder="Email Address" [(ngModel)]="email" #emailInput="ngModel" ngModel [email]="true" required
+                      [ngClass]="{'is-danger': emailInput.invalid && emailInput.touched}"
+                      [ngClass]="{'is-primary': emailInput.valid && emailInput.touched}">
+              <div class="help is-error" *ngIf="emailInput.touched && emailInput.invalid">
+                Your email is required or is invalid.
               </div>
             </div>
           </div>
