@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   
     <footer class="footer">
       <div class="container content has-text-centered">
-        <p>Developed by Brandon Carvalho using Angular</p>
+        <p>Developed by Brandon Carvalho using the <strong>MEAN</strong> stack</p>
       </div>
     </footer>
   `,

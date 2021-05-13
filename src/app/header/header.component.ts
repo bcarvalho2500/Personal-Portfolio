@@ -19,8 +19,10 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
       <div id="navbarMenuItems" class="navbar-menu" [ngClass]="{'is-active': hamClick}">
         <div class="navbar-start">
-          <a class="navbar-item" [routerLink]="['/']">Home</a>
+          <a class="navbar-item" [routerLink]="['/']">About Me</a>
           <a class="navbar-item" [routerLink]="['/contact']">Contact Me</a>
+          <a class="navbar-item" [routerLink]="['/resume']">Resume</a>
+          <a class="navbar-item" [routerLink]="['/github']">GitHub</a>
         </div>
       </div>
     </nav>

@@ -8,7 +8,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactmeComponent } from './contactme/contactme.component';
-import { HomepageComponent } from './homepage/homepage.component';
+import { AboutmeComponent } from './aboutme/aboutme.component';
+import { GithubComponent } from './github/github.component';
+import { ResumeComponent } from './resume/resume.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 
 @NgModule({
   declarations: [
@@ -16,13 +20,16 @@ import { HomepageComponent } from './homepage/homepage.component';
     HeaderComponent,
     FooterComponent,
     ContactmeComponent,
-    HomepageComponent
+    AboutmeComponent,
+    GithubComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
