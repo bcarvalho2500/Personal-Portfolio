@@ -52,6 +52,12 @@ import { Component, OnInit } from '@angular/core';
     #profilePhoto{
       height: 25em;
     }
+
+    @media only screen and (max-width: 500px) {
+      #profilePhoto {
+        height: 18em;
+      }
+    }
   `]
 })
 export class AboutmeComponent implements OnInit {
